@@ -33,7 +33,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     // Obtener los valores del formulario
     var nombre = document.getElementById('inputName').value;
     var email = document.getElementById('inputEmail').value;
-    if(nombre!="" && email!=""){
+
     // Crear un objeto con los datos
     var formData = { nombre: nombre, email: email };
 
@@ -47,9 +47,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     localStorage.setItem('formDataArray', JSON.stringify(formArray));
     
     // Redirigir a la nueva página
-    window.location.href = './ruleta/ruleta.html';}else{
-        alert("Nombre y mail son obligatorios")
-    }
+    window.location.href = './ruleta/ruleta.html';
 });
 
 
