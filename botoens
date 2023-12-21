@@ -1,0 +1,70 @@
+   
+   
+    <div id="terminar">
+      <button class="feedback">Jornada Terminada</button>
+      </div>
+  
+  
+  
+      <div id="volver">
+        <a href="../index.html"><button class="feedback">Volver</button></a>
+        </div>
+    <script src="script.js"></script>
+
+
+    //--------------------------//
+document.getElementById('terminar').addEventListener('click', function() {
+  // Obtener los datos del LocalStorage
+  var data = localStorage.getItem('formDataArray');
+  var jsonArray = JSON.parse(data);
+
+  // Crear contenido CSV
+  var csvContent = "data:text/csv;charset=utf-8,";
+  csvContent += "Nombre,Email\n"; // Columnas del CSV
+
+  // Añadir los datos del array al contenido CSV
+  jsonArray.forEach(function(row) {
+      var rowString = row.nombre + "," + row.email;
+      csvContent += rowString + "\n";
+  });
+
+  // Crear un enlace para descargar el CSV
+  var encodedUri = encodeURI(csvContent);
+  var link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "datos.csv");
+  document.body.appendChild(link); // Necesario para Firefox
+
+  // Descargar el archivo CSV
+  link.click();
+});
+
+
+
+
+.feedback {
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#terminar {
+  position: fixed;
+  top: -4px;
+  right: 10px;
+}
+.feedback {
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#volver {
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
