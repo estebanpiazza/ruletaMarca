@@ -13,13 +13,13 @@
             <form>
                 <div class="mb-3">
                     <label for="name"  class="form-label">Nombre</label>
-                    <input type="text"  required class="form-control" id="inputName" aria-describedby="nameHelp">
+                    <input type="text"   class="form-control" id="inputName" aria-describedby="nameHelp">
                 </div>
                 <div class="mb-3">
                     <label for="inputEmail"   class="form-label">Correo electronico</label>
-                    <input type="text" required class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                    <input type="text"  class="form-control" id="inputEmail" aria-describedby="emailHelp">
                 </div>
-                <button type="submit" class="btn btn-primary" id="submitBtn">Jugar</button>
+                <button type="button" class="btn btn-primary" id="submitBtn">Jugar</button>
             </form>
         </div>
     </div>
@@ -30,6 +30,7 @@
 </body>
 <script>
 document.getElementById('submitBtn').addEventListener('click', function() {
+    
     // Obtener los valores del formulario
     var nombre = document.getElementById('inputName').value;
     var email = document.getElementById('inputEmail').value;
