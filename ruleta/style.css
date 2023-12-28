@@ -21,6 +21,22 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   font-weight: bold!important;
 }
 
+#ruleta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.centro {
+  position: absolute;
+  width: 30vw; /* o el tamaño de tu imagen del centro*/
+  height:30vw; /* o el tamaño de tu imagen del centro */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 #centroRuleta{
