@@ -16,5 +16,15 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
 
 div:where(.swal2-container) h2:where(.swal2-title){
   color:white!important;
-  font-family: 'Montserrat', sans-serif!important;font-weight: bold!important;
+  font-family: 'Montserrat', sans-serif!important;
+  font-weight: bold!important;
+}
+
+#centroRuleta{
+  width: 23vw;
+  position:absolute;
+  top:44vw;
+  left:38vw;
+  z-index: 2;
+
 }
