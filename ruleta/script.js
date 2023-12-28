@@ -10,7 +10,7 @@ console.log(current_rotation)
 
 let current_rotation = 0;
 
-document.querySelector(".rotate").addEventListener('click', function() {
+document.getElementById("girar").addEventListener('click', function() {
   // Asegurarse de que el giro sea siempre un múltiplo de 360 más un ángulo de 45 grados
   let randomSpin = Math.floor(Math.random() * 12) * 30 + 360 * Math.floor(Math.random() * 5 + 4);
   current_rotation += randomSpin;

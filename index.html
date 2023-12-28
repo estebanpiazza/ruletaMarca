@@ -46,6 +46,10 @@
                     <label for="inputTel"   class="form-label">Celular</label>
                     <input type="text"   class="form-control" id="inputTel" aria-describedby="telHelp">
                 </div>
+                <div class="mb-3">
+                    <label for="inputEmail"   class="form-label">Correo electronico</label>
+                    <input type="text"   class="form-control" id="inputEmail"" aria-describedby="telHelp">
+                </div>
                 
                 <div style="text-align: center;">
                     <h2>JUGÁ A LA RULETA</h2>
@@ -76,9 +80,10 @@ document.getElementById('submitBtn').addEventListener('click', function() {
 var nombre = document.getElementById('inputName').value;
     var dni = document.getElementById('inputDNI').value;
     var celular = document.getElementById('inputTel').value;
+    var mail = document.getElementById("inputEmail").value;
 
     // Crear un objeto con los datos
-    var formData = { nombre: nombre, dni: dni, celular: celular, };
+    var formData = { nombre: nombre, dni: dni, celular: celular,mail:mail };
 
     // Obtener el array actual de datos del LocalStorage o inicializar uno nuevo si no existe
     var formArray = JSON.parse(localStorage.getItem('formDataArray')) || [];

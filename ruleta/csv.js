@@ -5,11 +5,11 @@ document.getElementById('terminar').addEventListener('click', function() {
   
     // Crear contenido CSV
     var csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += "Nombre,dni,Tel\n"; // Columnas del CSV
+    csvContent += "Nombre,dni,Tel,Mail\n"; // Columnas del CSV
   
     // Añadir los datos del array al contenido CSV
     jsonArray.forEach(function(row) {
-        var rowString = (row.nombre || '') + "," + (row.dni || '') + "," + (row.celular || '');
+        var rowString = (row.nombre || '') + "," + (row.dni || '') + "," + (row.celular || '') + "," + (row.mail || '');
         csvContent += rowString + "\n";
     });
   
