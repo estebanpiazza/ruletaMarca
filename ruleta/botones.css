@@ -1,16 +1,3 @@
-.feedback {
-    background-color : #32cf78;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border-color: #46b8da;
-  }
-  
-  #terminar {
-    position: fixed;
-    bottom: -4px;
-    left: 10px;
-  }
   .feedback {
     background-color : #32cf78;
     color: white;
@@ -21,8 +8,8 @@
   
   #volver {
     position: fixed;
-    bottom: -4px;
-    right: 10px;
+    top: -4px;
+    left: 10px;
     
   }
   

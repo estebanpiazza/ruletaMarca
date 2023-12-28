@@ -9,16 +9,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../normalizacion.css">
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
   <div style="text-align: center;">
-    <img src="/bplay-logo.png" alt="">
+    <img src="/bplay-logo.png" alt="" style="margin-top: 30px;">
     <p style="margin:0; font-size:50px;color:#32cf78;"> ▼</p>
 </div>
   <div id="ruleta" style="z-index: 0;">
-    <img src="./centro-ruleta.png" id="centroRuleta" alt="">    
+ <!--    <img src="./centro-ruleta.png" id="centroRuleta" alt="">     -->
 <img src="./Rueda-de-la-fortuna-COSTA.webp" class="rotate"  style="z-index: 0;" alt="" id="image">
 <h1>TOCA LA RULETA PARA HACERLA GIRAR</h1>
 </div>
@@ -26,14 +27,12 @@
 <div id="volver">
   <a href="../index.html"><button class="feedback">Volver</button></a>
   </div>
-<div id="terminar">
-  <button class="feedback">Jornada Terminada</button>
-  </div>
+
 </body>
 <script src="./csv.js"></script>
 
 
 <script src="script.js"></script>
 
-<script src="../audio.js"></script>
+<script src="audio.js"></script>
 </html>

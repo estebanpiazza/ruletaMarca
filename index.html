@@ -12,6 +12,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./normalizacion.css">
 </head>
+<style>
+    .feedback {
+    background-color : #32cf78;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #46b8da;
+  }
+  
+  #terminar {
+    position: fixed;
+    bottom: -4px;
+    left: 10px;
+  }
+</style>
 <body>
     <div class="container">
         <div class="row">
@@ -38,7 +53,9 @@
             </div>
         </div>
     </div>
-   
+    <div id="terminar">
+        <button class="feedback">Jornada Terminada</button>
+        </div>
     
       
     
@@ -79,5 +96,6 @@ var nombre = document.getElementById('inputName').value;
 
 
 </script>
+<script src="./ruleta/csv.js"></script>
 <script src="./audio.js"></script>
 </html>

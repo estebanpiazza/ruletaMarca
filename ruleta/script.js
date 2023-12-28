@@ -57,16 +57,16 @@ document.querySelector(".rotate").addEventListener('click', function() {
     if(segment_index == 1 || segment_index == 5 || segment_index == 7 ||segment_index == 11 ){
             Swal.fire({
                 icon: "question",
-                title: "Proba de vuelta",
-                background:"black",
-                confirmButtonAriaLabel:"#32cf78",
+                title: "Probá de vuelta",
+            background:"black",
+            confirmButtonAriaLabel:"#32cf78",
               });}
     if(segment_index == 2 || segment_index == 4 || segment_index == 8 ||segment_index == 10 ){
                 Swal.fire({
                     icon: "success",
-                    title: "GANASTE",
-                    background:"black",
-                    confirmButtonAriaLabel:"#32cf78",
+                    title: "Ganaste",
+            background:"black",
+            confirmButtonAriaLabel:"#32cf78",
                   });}
 
   }, 4000); // Esperar 4 segundos, que es la duración de la animación

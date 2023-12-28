@@ -14,18 +14,25 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   background-color:#32cf78!important ;
 }
 
-div:where(.swal2-container) h2:where(.swal2-title){
+
+.swal2-container{
+
+  
+}
+.swal2-title{
   color:white!important;
+  padding:0px!important;
   font-family: 'Montserrat', sans-serif!important;
   font-weight: bold!important;
-  width: 70vw;
 }
+
+
 
 #centroRuleta{
   width: 23vw;
   position:absolute;
-  top:44vw;
-  left:38vw;
+  top:38vh;
+  left:38.5vw;
   z-index: 2;
 
 }
