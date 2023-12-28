@@ -1,0 +1,10 @@
+*{font-family: 'Montserrat', sans-serif;color:white;font-weight: bold;}
+body{background-color: black;}
+input{display: inline;width: 50vw;}
+label{display: inline;width: 50vw;}
+#submitBtn{
+    margin-top: 2vh;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: #32cf78;
+}
