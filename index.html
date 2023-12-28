@@ -22,9 +22,14 @@
   }
   
   #terminar {
-    position: fixed;
+    position: relative;
     bottom: -4px;
     left: 10px;
+  }
+  #music{
+    position: absolute;
+    bottom: -4px;
+    right: 1px;
   }
 </style>
 <body>
@@ -32,6 +37,7 @@
         <div class="row">
             <div style="text-align: center;">
                 <img src="/bplay-logo.png" alt="">
+                <h1>Completa el formulario para generar tu usuario</h1>
             </div>
             <form>
                 <div class="mb-3">
@@ -44,7 +50,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputTel"   class="form-label">Celular</label>
-                    <input type="text"   class="form-control" id="inputTel" aria-describedby="telHelp">
+                    <input type="text"  inputmode="tel"  class="form-control" id="inputTel" aria-describedby="telHelp">
                 </div>
                 <div class="mb-3">
                     <label for="inputEmail"   class="form-label">Correo electronico</label>
@@ -60,9 +66,12 @@
     <div id="terminar">
         <button class="feedback">Jornada Terminada</button>
         </div>
-    
-      
-    
+        <div>
+        <audio controls id="music">
+            <source src="beauteous-upbeat-electronic-162757.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+        </div>
 </body>
 <script>
 
@@ -101,6 +110,15 @@ var nombre = document.getElementById('inputName').value;
 
 
 </script>
-<script src="./ruleta/csv.js"></script>
-<script src="./audio.js"></script>
+<script src="./ruleta/csv.js">
+    var myMusic= document.getElementById("music");
+function play() {
+myMusic.play();
+}
+
+function pause() {
+myMusic.pause();
+}
+</script>
+<!-- <script src="./audio.js"></script> -->
 </html>
