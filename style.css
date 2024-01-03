@@ -47,3 +47,43 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   z-index: 2;
 
 }
+#volver {
+  position: fixed;
+  top: -4px;
+  left: 10px;
+  
+}
+
+.feedback {
+  position: fixed;
+  background-color: #32cf78;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+  bottom: 0px;
+  left: 0px;
+}
+
+.feedback2 {
+  position: fixed;
+  background-color: #32cf78;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+  top: 0px;
+  left: 0px;
+}
+
+#terminar {
+  position: relative;
+  bottom: -4px;
+  left: 10px;
+}
+
+#music {
+  position: absolute;
+  bottom: -4px;
+  right: 1px;
+}

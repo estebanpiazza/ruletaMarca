@@ -8,6 +8,12 @@ console.log(current_rotation)
 });
  */
 
+
+let seccionRuleta = document.getElementById("seccionRuleta")
+seccionRuleta.style.display ="none"
+let seccionRegistro =  document.getElementById("seccionRegistro")
+
+
 let current_rotation = 0;
 
 document.getElementById("girar").addEventListener('click', function() {
@@ -54,6 +60,7 @@ document.getElementById("girar").addEventListener('click', function() {
             background:"black",
             confirmButtonAriaLabel:"#32cf78",
           });}
+          
     if(segment_index == 1 || segment_index == 5 || segment_index == 7 ||segment_index == 11 ){
             Swal.fire({
                 icon: "question",
@@ -61,6 +68,7 @@ document.getElementById("girar").addEventListener('click', function() {
             background:"black",
             confirmButtonAriaLabel:"#32cf78",
               });}
+              
     if(segment_index == 2 || segment_index == 4 || segment_index == 8 ||segment_index == 10 ){
                 Swal.fire({
                     icon: "success",
@@ -68,9 +76,59 @@ document.getElementById("girar").addEventListener('click', function() {
             background:"black",
             confirmButtonAriaLabel:"#32cf78",
                   });}
-
+                  
   }, 4000); // Esperar 4 segundos, que es la duración de la animación
  
 
 }
 );
+
+
+let volver = document.getElementById("volver")
+volver.addEventListener("click",function(){
+  seccionRegistro.style.display ="block"
+  seccionRuleta.style.display ="none"
+  document.getElementById('inputName').value = "";
+  document.getElementById('inputDNI').value= "";
+  document.getElementById('inputTel').value= "";
+  document.getElementById("inputEmail").value= "";
+
+})
+
+
+
+document.getElementById('submitBtn').addEventListener('click', function () {
+  if (document.getElementById('inputName').value == "" || document.getElementById('inputDNI').value == "" || document.getElementById('inputTel').value == "") {
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Los datos son obligatorios",
+
+      });
+
+  } else {
+      // Obtener los valores del formulario
+      let nombre = document.getElementById('inputName').value;
+      let dni = document.getElementById('inputDNI').value;
+      let celular = document.getElementById('inputTel').value;
+      let mail = document.getElementById("inputEmail").value;
+
+      // Crear un objeto con los datos
+      let formData = { nombre: nombre, dni: dni, celular: celular, mail: mail };
+
+      // Obtener el array actual de datos del LocalStorage o inicializar uno nuevo si no existe
+      let formArray = JSON.parse(localStorage.getItem('formDataArray')) || [];
+
+      // Añadir los nuevos datos al array
+      formArray.push(formData);
+      
+
+      // Guardar el array actualizado en LocalStorage
+      localStorage.setItem('formDataArray', JSON.stringify(formArray));
+
+
+      seccionRegistro.style.display ="none"
+      seccionRuleta.style.display ="block"
+  
+  }
+});
