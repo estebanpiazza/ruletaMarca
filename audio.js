@@ -11,7 +11,7 @@ audioElement0.addEventListener('ended', function() {
 
 
 let botonmusica = document.getElementById("musica")
-document.addEventListener("click", function(){
+botonmusica.addEventListener("click", function(){
     console.log("HOLA")
     audioElement0.play()
     botonmusica.style.display="none"
