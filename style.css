@@ -76,6 +76,17 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   left: 0px;
 }
 
+.feedback3 {
+  position: fixed;
+  background-color: #32cf78;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+  bottom: 0px;
+  left: 250px;
+}
+
 #terminar {
   position: relative;
   bottom: -4px;
